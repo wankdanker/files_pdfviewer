@@ -1,7 +1,7 @@
 const webpackConfig = require('@nextcloud/webpack-vue-config')
 const path = require('path')
-const unzipper = require('unzipper')
 const request = require('request')
+const unzipper = require('unzipper')
 
 // Fetching pdf.js build release
 const PDFJSversion = '2.4.456'
@@ -11,4 +11,5 @@ console.info('Downloading pdf.js', PDFJSversion, '\n')
 
 webpackConfig.entry.workersrc = path.resolve(path.join('src', 'workersrc.js'))
 webpackConfig.entry.public = path.resolve(path.join('src', 'public.js'))
+
 module.exports = webpackConfig
